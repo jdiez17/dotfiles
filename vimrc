@@ -6,6 +6,8 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'bling/vim-airline'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on
 
@@ -31,5 +33,16 @@ set magic
 
 set number
 set relativenumber
+
+" Special modes for certain types of files
+autocmd FileType make setlocal noexpandtab
+autocmd Filetype go setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
+autocmd Filetype html setlocal softtabstop=2 shiftwidth=2
+au BufRead,BufNewFile *.md setlocal filetype=markdown
+
+" Save as root
+cmap w!! %!sudo tee > /dev/null %
+
+colorscheme ron
 
 syntax on
