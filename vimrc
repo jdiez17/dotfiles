@@ -25,10 +25,9 @@ let g:airline#extensions#paste#symbol = '∥'
 let g:airline#extensions#whitespace#symbol = 'Ξ'
 
 set encoding=utf-8
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set ts=4 sts=4 sw=4 expandtab
 set autoindent
+set smartindent
 set magic
 
 set number
