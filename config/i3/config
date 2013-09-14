@@ -182,3 +182,4 @@ for_window [class="URxvt"] border none
 for_window [class="Vlc"] border none
 for_window [title="xfce4-notifyd"] floating enable; border none; focus mode_toggle
 for_window [instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] floating enable; border none; focus_mode toggle # Hangouts
+for_window [class="Spotify"] border none; fullscreen
