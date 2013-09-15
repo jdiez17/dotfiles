@@ -84,7 +84,7 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1
 bindsym $mod+Shift+quotedbl move workspace 2
-bindsym $mod+Shift+sterling move workspace 3
+bindsym $mod+Shift+periodcentered move workspace 3
 bindsym $mod+Shift+dollar move workspace 4
 bindsym $mod+Shift+percent move workspace 5
 bindsym $mod+Shift+asciicircum move workspace 6
@@ -105,10 +105,12 @@ bindsym $mod+F1 exit
 bindsym XF86KbdBrightnessDown exec sudo asus-backlight.sh down
 bindsym XF86KbdBrightnessUp exec sudo asus-backlight.sh up
 
+# Useful keys
 bindsym XF86AudioMute exec amixer -c 0 -- sset Headphone togglemute
 bindsym XF86AudioLowerVolume exec amixer -c 0 -- sset Headphone playback 5dB-
 bindsym XF86AudioRaiseVolume exec amixer -c 0 -- sset Headphone playback 5dB+
 bindsym XF86AudioPlay exec dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause # Play/Pause spotify
+bindsym Print exec scrush
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
