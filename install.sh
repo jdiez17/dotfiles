@@ -9,3 +9,4 @@ ln -s $PWD/awesome $HOME/.config
 ln -s $PWD/config/i3 $HOME/.config/i3
 ln -s $PWD/config/i3status $HOME/.config/i3status
 ln -s $PWD/ttytterrc $HOME/.config/.ttytterrc
+ln -s $PWD/bin $HOME/bin

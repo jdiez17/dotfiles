@@ -1,20 +1,13 @@
 general {
-    output_format = "i3bar"
     colors = true
     interval = 1
 }
 
 order += "volume master"
 order += "disk /home"
-order += "ethernet eth0"
 order += "cpu_usage 0"
 order += "load"
 order += "time"
-
-ethernet eth0 {
-    format_up = "%ip (%speed)"
-    format_down = ""
-}
 
 load {
     format = "☢ %1min"
