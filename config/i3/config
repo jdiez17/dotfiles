@@ -120,8 +120,8 @@ mode "resize" {
         # when pressing left, the window is resized so that it has
         # more space on its left
 
-bindsym j resize shrink left 10 px or 10 ppt
-bindsym Shift+J resize grow   left 10 px or 10 ppt
+bindsym j resize shrink width 1 px 
+bindsym Shift+J resize grow   width 10 px
 
 bindsym k resize shrink down 10 px or 10 ppt
 bindsym Shift+K resize grow   down 10 px or 10 ppt
