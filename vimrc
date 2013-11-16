@@ -1,5 +1,5 @@
 set nocompatible
-filetype off 
+filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -24,6 +24,8 @@ let g:airline#extensions#paste#symbol = 'Þ'
 let g:airline#extensions#paste#symbol = '∥'
 let g:airline#extensions#whitespace#symbol = 'Ξ'
 
+let g:vim_markdown_folding_disabled=1
+
 set encoding=utf-8
 set ts=4 sts=4 sw=4 expandtab
 set autoindent
@@ -37,6 +39,10 @@ set relativenumber
 autocmd FileType make setlocal noexpandtab
 autocmd Filetype go setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufRead,BufNewFile *.md setlocal filetype=markdown
+
+" Clear trailing spaces
+cmap ts %s/\s\+$//e
+autocmd BufWritePre *.py %s/\s\+$//e
 
 " Save as root
 cmap w!! %!sudo tee > /dev/null %

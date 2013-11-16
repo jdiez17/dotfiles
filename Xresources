@@ -6,7 +6,7 @@ URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.urlLauncher: chromium-browser
 URxvt.matcher.button: 1
 
-#define S_base03        #002b36
+#define S_base03        #002630
 #define S_base02        #073642
 #define S_base01        #586e75
 #define S_base00        #657b83

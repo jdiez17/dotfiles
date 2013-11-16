@@ -24,7 +24,7 @@ disk "/home" {
 volume master {
     format = "☊ %volume"
     device = "default"
-    mixer = "Headphone"
+    mixer = "Master"
     mixer_idx = 0
 }
 
