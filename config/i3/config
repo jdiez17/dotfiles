@@ -112,8 +112,8 @@ bindsym XF86KbdBrightnessUp exec sudo asus-backlight.sh up
 
 # Useful keys
 bindsym XF86AudioMute exec amixer -c 1 -- sset Master togglemute
-bindsym XF86AudioLowerVolume exec amixer -c 1 -- sset Master playback 5dB-
-bindsym XF86AudioRaiseVolume exec amixer -c 1 -- sset Master playback 5dB+
+bindsym XF86AudioLowerVolume exec amixer -c 1 -- sset Master playback 1%-
+bindsym XF86AudioRaiseVolume exec amixer -c 1 -- sset Master playback 1%+
 bindsym XF86AudioPlay exec dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause # Play/Pause spotify
 bindsym Print exec scrush
 
@@ -194,3 +194,6 @@ for_window [class="Spotify"] border none; fullscreen
 
 # Wallpaper
 exec --no-startup-id sh ~/.fehbg
+
+# Composer
+exec --no-startup-id exec compton --backend glx --vsync opengl-oml --paint-on-overlay

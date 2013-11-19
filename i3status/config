@@ -23,9 +23,9 @@ disk "/home" {
 
 volume master {
     format = "☊ %volume"
-    device = "default"
+    device = "hw:1,0"
     mixer = "Master"
-    mixer_idx = 0
+    mixer_idx = 0 
 }
 
 time {
