@@ -196,4 +196,5 @@ for_window [class="Spotify"] border none; fullscreen
 exec --no-startup-id sh ~/.fehbg
 
 # Composer
-exec --no-startup-id exec compton --backend glx --vsync opengl-oml --paint-on-overlay
+#exec --no-startup-id exec compton --backend glx --vsync opengl-oml --paint-on-overlay
+exec --no-startup-id exec compton -b
