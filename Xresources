@@ -6,7 +6,7 @@ URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.urlLauncher: chromium-browser
 URxvt.matcher.button: 1
 
-#define S_base03        #002b36
+#define S_base03        #002630
 #define S_base02        #073642
 #define S_base01        #586e75
 #define S_base00        #657b83
@@ -23,13 +23,15 @@ URxvt.matcher.button: 1
 #define S_cyan          #2aa198
 #define S_green         #859900
 
-*background:            S_base03
-*foreground:            S_base0
-*fading:                40
-*fadeColor:             S_base03
-*cursorColor:           S_base1
-*pointerColorBackground:S_base01
-*pointerColorForeground:S_base1
+URxvt.depth: 32
+
+URxvt.*background:            S_base03 
+URxvt.*foreground:            S_base0
+URxvt.*fading:                40
+URxvt.*fadeColor:             S_base03
+URxvt.*cursorColor:           S_base1
+URxvt.*pointerColorBackground:S_base01
+URxvt.*pointerColorForeground:S_base1
 
 !! black dark/light
 *color0:                S_base02

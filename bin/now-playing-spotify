@@ -1,0 +1,15 @@
+#!/usr/bin/env python2
+
+import dbus
+
+form = "%s - %s"
+
+try:
+    bus = dbus.SessionBus()
+    proxy = bus.get_object('org.mpris.MediaPlayer2.spotify', '/org/mpris/MediaPlayer2')
+    props = dbus.Interface(proxy, 'org.freedesktop.DBus.Properties')
+    meta = props.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
+
+    print form % (meta['xesam:title'], meta['xesam:artist'][0])
+except:
+    pass

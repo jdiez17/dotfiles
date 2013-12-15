@@ -15,4 +15,6 @@ ln -s $PWD/i3status/config $HOME/.config/i3status/config
 ln -s $PWD/ttytterrc $HOME/.config/.ttytterrc
 ln -s $PWD/bin $HOME/bin
 ln -s $PWD/Xresources $HOME/.Xresources
+ln -s $PWD/dunstrc $HOME/.config/dunst/dunstrc
+
 xrdb -merge $HOME/.Xresources

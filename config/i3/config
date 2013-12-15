@@ -100,6 +100,11 @@ bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+F1 exit
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
 # Function keys
 bindsym XF86KbdBrightnessDown exec sudo asus-backlight.sh down
@@ -186,3 +191,10 @@ for_window [class="Vlc"] border none
 for_window [title="xfce4-notifyd"] floating enable; border none; focus mode_toggle
 for_window [instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] floating enable; border none; focus_mode toggle # Hangouts
 for_window [class="Spotify"] border none; fullscreen
+
+# Wallpaper
+exec --no-startup-id sh ~/.fehbg
+
+# Composer
+#exec --no-startup-id exec compton --backend glx --vsync opengl-oml --paint-on-overlay
+exec --no-startup-id exec compton -b
