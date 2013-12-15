@@ -106,9 +106,9 @@ bindsym XF86KbdBrightnessDown exec sudo asus-backlight.sh down
 bindsym XF86KbdBrightnessUp exec sudo asus-backlight.sh up
 
 # Useful keys
-bindsym XF86AudioMute exec amixer -c 0 -- sset Master togglemute
-bindsym XF86AudioLowerVolume exec amixer -c 0 -- sset Master playback 5dB-
-bindsym XF86AudioRaiseVolume exec amixer -c 0 -- sset Master playback 5dB+
+bindsym XF86AudioMute exec pa-setvol mute 
+bindsym XF86AudioLowerVolume exec pa-setvol minus 
+bindsym XF86AudioRaiseVolume exec pa-setvol plus 
 bindsym XF86AudioPlay exec dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause # Play/Pause spotify
 bindsym Print exec scrush
 
