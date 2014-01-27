@@ -9,6 +9,7 @@ Bundle 'bling/vim-airline'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 filetype plugin indent on
 
@@ -26,6 +27,8 @@ let g:airline#extensions#paste#symbol = '∥'
 let g:airline#extensions#whitespace#symbol = 'Ξ'
 
 let g:vim_markdown_folding_disabled=1
+
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 set encoding=utf-8
 set ts=4 sts=4 sw=4 expandtab
@@ -47,6 +50,9 @@ autocmd BufWritePre *.py %s/\s\+$//e
 
 " Save as root
 cmap w!! %!sudo tee > /dev/null %
+
+" NerdTree
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 colorscheme ron
 
