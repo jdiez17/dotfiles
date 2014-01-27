@@ -3,7 +3,7 @@ general {
     interval = 1
 }
 
-order += "volume master"
+#order += "volume master"
 order += "disk /home"
 order += "cpu_usage 0"
 order += "load"
@@ -23,7 +23,7 @@ disk "/home" {
 
 volume master {
     format = "☊ %volume"
-    device = "hw:1,0"
+    device = "default"
     mixer = "Master"
     mixer_idx = 0 
 }

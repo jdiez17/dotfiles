@@ -114,8 +114,8 @@ bindsym XF86KbdBrightnessUp exec sudo asus-backlight.sh up
 bindsym XF86AudioMute exec amixer -c 1 -- sset Master togglemute
 bindsym XF86AudioLowerVolume exec amixer -c 1 -- sset Master playback 1%-
 bindsym XF86AudioRaiseVolume exec amixer -c 1 -- sset Master playback 1%+
-bindsym XF86AudioPlay exec dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause # Play/Pause spotify
-bindsym Print exec scrush
+bindsym $mod+Shift+p exec dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause # Play/Pause spotify
+bindsym Print exec /home/jdiez/bin/scrush
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

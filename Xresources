@@ -1,4 +1,4 @@
-URxvt.font: xft:Monospace:size=11
+URxvt.font: xft:Ubuntu Mono:size=11
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
 
