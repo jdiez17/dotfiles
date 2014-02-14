@@ -36,6 +36,9 @@ set autoindent
 set smartindent
 set magic
 
+" Copy to clipboard
+set clipboard=unnamed
+
 set number
 set relativenumber
 
