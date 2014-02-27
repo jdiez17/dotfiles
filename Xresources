@@ -2,9 +2,14 @@ URxvt.font: xft:Ubuntu Mono:size=11
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
 
-URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.perl-ext-common: default,matcher,clipboard,font-size
 URxvt.urlLauncher: chromium-browser
 URxvt.matcher.button: 1
+
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
 #define S_base03        #002630
 #define S_base02        #073642

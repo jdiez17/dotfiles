@@ -197,7 +197,7 @@ exec --no-startup-id sh ~/.fehbg
 
 # Composer
 #exec --no-startup-id exec compton --backend glx --vsync opengl-oml --paint-on-overlay
-exec --no-startup-id exec compton -b
+#exec --no-startup-id exec compton -b
 
 workspace 1 output DFP7
 workspace 2 output DFP5

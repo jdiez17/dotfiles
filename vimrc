@@ -28,13 +28,14 @@ let g:airline#extensions#whitespace#symbol = 'Ξ'
 
 let g:vim_markdown_folding_disabled=1
 
-let g:nerdtree_tabs_open_on_console_startup = 1
-
 set encoding=utf-8
 set ts=4 sts=4 sw=4 expandtab
 set autoindent
 set smartindent
 set magic
+
+" Leader = ,
+let mapleader = ","
 
 " Copy to clipboard
 set clipboard=unnamed
