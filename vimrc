@@ -10,6 +10,8 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'majutsushi/tagbar'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 
@@ -55,8 +57,13 @@ autocmd BufWritePre *.py %s/\s\+$//e
 " Save as root
 cmap w!! %!sudo tee > /dev/null %
 
-" NerdTree
+" Leader commands
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
+map <Leader>t :TagbarToggle<CR>
+map <Leader>d :YcmDiags<CR>
+
+" YCM
+let g:ycm_confirm_extra_conf = 0
 
 colorscheme ron
 
