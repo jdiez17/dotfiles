@@ -11,7 +11,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'majutsushi/tagbar'
-Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 
@@ -30,6 +29,7 @@ let g:airline#extensions#whitespace#symbol = 'Ξ'
 
 let g:vim_markdown_folding_disabled=1
 
+set shortmess=a 
 set encoding=utf-8
 set ts=4 sts=4 sw=4 expandtab
 set autoindent
@@ -60,10 +60,6 @@ cmap w!! %!sudo tee > /dev/null %
 " Leader commands
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map <Leader>t :TagbarToggle<CR>
-map <Leader>d :YcmDiags<CR>
-
-" YCM
-let g:ycm_confirm_extra_conf = 0
 
 colorscheme ron
 
