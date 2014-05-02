@@ -11,6 +11,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'majutsushi/tagbar'
+Bundle 'bitc/vim-hdevtools'
+Bundle 'jpalardy/vim-slime'
 
 filetype plugin indent on
 
@@ -49,6 +51,7 @@ set relativenumber
 autocmd FileType make setlocal noexpandtab
 autocmd Filetype go setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufRead,BufNewFile *.md setlocal filetype=markdown
+au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
 
 " Clear trailing spaces
 cmap ts %s/\s\+$//e
@@ -60,6 +63,9 @@ cmap w!! %!sudo tee > /dev/null %
 " Leader commands
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map <Leader>t :TagbarToggle<CR>
+
+" SLIME config
+let g:slime_target = "tmux"
 
 colorscheme ron
 
