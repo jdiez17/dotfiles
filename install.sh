@@ -16,5 +16,6 @@ ln -s $PWD/ttytterrc $HOME/.config/.ttytterrc
 ln -s $PWD/bin $HOME/bin
 ln -s $PWD/Xresources $HOME/.Xresources
 ln -s $PWD/dunstrc $HOME/.config/dunst/dunstrc
+ln -s $PWD/ghci $HOME/.ghci
 
 xrdb -merge $HOME/.Xresources
