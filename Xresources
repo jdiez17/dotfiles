@@ -1,4 +1,10 @@
-URxvt.font: xft:Ubuntu Mono:size=11
+Xft.dpi:   210
+
+!!dmenu.font: pango:DejaVu Sans Mono 7
+
+!!URxvt.font: xft:Ubuntu Mono:size=13
+!!URxvt.font: xft:Inconsolata:size=14,xft:Inconsolata for Powerline:size=14,xft:Symbola:size=14
+URxvt.font: xft:DejaVu Sans Mono:size=13
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
 

@@ -1,7 +1,8 @@
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:DejaVu Sans Mono 7 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -108,13 +109,13 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Function keys
-bindsym XF86KbdBrightnessDown exec sudo asus-backlight.sh down
-bindsym XF86KbdBrightnessUp exec sudo asus-backlight.sh up
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 
 
 # Useful keys
-bindsym XF86AudioMute exec amixer -c 0 -- sset Master togglemute
-bindsym XF86AudioLowerVolume exec amixer -c 0 -- sset Master playback 1%-
-bindsym XF86AudioRaiseVolume exec amixer -c 0 -- sset Master playback 1%+
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle 
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -15% 
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +15% 
 bindsym $mod+Shift+p exec dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause # Play/Pause spotify
 bindsym Print exec /home/jdiez/bin/scrush
 
@@ -160,13 +161,11 @@ bindsym Escape mode "default"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status-custom
+        status_command i3status
         mode dock
         modifier Mod4
-        #Notification tray on large monitor
-        tray_output primary
 
-        font pango:Monospace 11
+        font xft:Ubuntu Mono 9 
 
         colors {
             background #002b36
@@ -191,6 +190,8 @@ for_window [class="URxvt"] border none
 for_window [class="Vlc"] border none
 for_window [title="xfce4-notifyd"] floating enable; border none; focus mode_toggle
 for_window [class="FTL"] floating enable; border none; focus mode_toggle
+for_window [class="XMathematica"] floating enable; border none; focus mode_toggle
+for_window [class="Wicd-client.py"] floating enable; border none; focus mode_toggle
 for_window [instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] floating enable; border none; focus_mode toggle # Hangouts
 for_window [class="Spotify"] border none; fullscreen
 
@@ -198,9 +199,6 @@ for_window [class="Spotify"] border none; fullscreen
 exec --no-startup-id sh ~/.fehbg
 
 # Composer
-#exec --no-startup-id exec compton --backend glx --vsync opengl-oml --paint-on-overlay
+#exec --no-startup-id exec compton --backend glx --vsync opengl-oml --paint-on-overlay -b
 #exec --no-startup-id exec compton -b
-
-workspace 1 output DVI-0 
-workspace 2 output DVI-1 
-workspace 3 output HDMI-0 
+exec --no-startup-id exec compton --config /home/jdiez/dotfiles/compton.conf
