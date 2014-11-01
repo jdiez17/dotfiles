@@ -113,9 +113,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 
 
 # Useful keys
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle 
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -15% 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +15% 
+bindsym XF86AudioMute exec pamixer --toggle-mute
+bindsym XF86AudioLowerVolume exec pamixer --decrease 10 
+bindsym XF86AudioRaiseVolume exec pamixer --increase 10 
 bindsym $mod+Shift+p exec dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause # Play/Pause spotify
 bindsym Print exec /home/jdiez/bin/scrush
 
