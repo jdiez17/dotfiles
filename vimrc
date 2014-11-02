@@ -13,6 +13,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'majutsushi/tagbar'
 Bundle 'bitc/vim-hdevtools'
 Bundle 'jpalardy/vim-slime'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
