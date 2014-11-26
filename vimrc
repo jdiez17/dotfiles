@@ -14,6 +14,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'bitc/vim-hdevtools'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on
 
