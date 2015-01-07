@@ -195,6 +195,8 @@ for_window [class="Wicd-client.py"] floating enable; border none; focus mode_tog
 for_window [instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] floating enable; border none; focus_mode toggle # Hangouts
 for_window [class="Spotify"] border none; fullscreen
 for_window [class="Gajim"] floating enable; focus mode_toggle
+for_window [class="Pidgin"] floating enable; focus mode_toggle
+for_window [class="Skype"] floating enable; focus mode_toggle
 
 # Wallpaper
 exec --no-startup-id sh ~/.fehbg

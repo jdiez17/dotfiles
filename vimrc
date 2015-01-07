@@ -4,7 +4,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
 Bundle 'bling/vim-airline'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-fugitive'
@@ -15,6 +14,12 @@ Bundle 'bitc/vim-hdevtools'
 Bundle 'jpalardy/vim-slime'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'eagletmt/ghcmod-vim'
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 filetype plugin indent on
 
@@ -33,7 +38,7 @@ let g:airline#extensions#whitespace#symbol = 'Ξ'
 
 let g:vim_markdown_folding_disabled=1
 
-set shortmess=a 
+set shortmess=a
 set encoding=utf-8
 set ts=4 sts=4 sw=4 expandtab
 set autoindent
@@ -65,6 +70,8 @@ cmap w!! %!sudo tee > /dev/null %
 " Leader commands
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map <Leader>t :TagbarToggle<CR>
+
+map <Leader>y :HdevtoolsType<CR>
 
 " SLIME config
 let g:slime_target = "tmux"
