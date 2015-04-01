@@ -2,7 +2,7 @@ set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:DejaVu Sans Mono 7 
+font pango:DejaVu Sans Mono 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -114,8 +114,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 
 # Useful keys
 bindsym XF86AudioMute exec pamixer --toggle-mute
-bindsym XF86AudioLowerVolume exec pamixer --allow-boost --decrease 10 
-bindsym XF86AudioRaiseVolume exec pamixer --allow-boost --increase 10 
+bindsym XF86AudioLowerVolume exec pamixer --allow-boost --decrease 10 && volnoti-show `vol` 
+bindsym XF86AudioRaiseVolume exec pamixer --allow-boost --increase 10 && volnoti-show `vol`
 bindsym $mod+Shift+p exec dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause # Play/Pause spotify
 bindsym Print exec /home/jdiez/bin/scrush
 
@@ -165,7 +165,7 @@ bar {
         mode dock
         modifier Mod4
 
-        font xft:Ubuntu Mono 9 
+        font xft:Ubuntu Mono 14
 
         colors {
             background #002b36
@@ -201,7 +201,4 @@ for_window [class="Skype"] floating enable; focus mode_toggle
 # Wallpaper
 exec --no-startup-id sh ~/.fehbg
 
-# Composer
-#exec --no-startup-id exec compton --backend glx --vsync opengl-oml --paint-on-overlay -b
-#exec --no-startup-id exec compton -b
 exec --no-startup-id exec compton --config /home/jdiez/dotfiles/compton.conf

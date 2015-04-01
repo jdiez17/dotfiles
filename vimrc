@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Bundle 'bling/vim-airline'
@@ -23,23 +23,14 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 filetype plugin indent on
 
+set encoding=utf-8
 set laststatus=2
 set t_Co=256
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
-let g:airline_linecolumn_prefix = '␊ '
-let g:airline_linecolumn_prefix = '␤ '
-let g:airline_linecolumn_prefix = '¶ '
-let g:airline#extensions#branch#symbol = '⎇ '
-let g:airline#extensions#paste#symbol = 'ρ'
-let g:airline#extensions#paste#symbol = 'Þ'
-let g:airline#extensions#paste#symbol = '∥'
-let g:airline#extensions#whitespace#symbol = 'Ξ'
+let g:airline_powerline_fonts = 1
 
 let g:vim_markdown_folding_disabled=1
 
 set shortmess=a
-set encoding=utf-8
 set ts=4 sts=4 sw=4 expandtab
 set autoindent
 set smartindent
