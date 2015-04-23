@@ -1,13 +1,16 @@
 Xft.dpi:  165 
 
 !!dmenu.font: pango:DejaVu Sans Mono 7
-URxvt.font: xft:Inconsolata for Powerline:size=14,xft:Symbola:size=7
+URxvt.font: xft:Inconsolata for Powerline:size=12,xft:Ubuntu Mono derivative Powerline:size=14,xft:Symbola:size=7
 !!URxvt.font: xft:DejaVu Sans Mono:size=10
 !!URxvt.font: xft:Ubuntu Mono:size=12
 
 !
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
+
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
 
 URxvt.perl-ext-common: default,matcher,clipboard,font-size
 URxvt.urlLauncher: chromium-browser

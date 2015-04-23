@@ -6,7 +6,7 @@ general {
 #order += "volume master"
 order += "cpu_temperature 0"
 order += "battery 0"
-order += "wireless wlp3s0"
+order += "wireless wlp2s0"
 order += "disk /home"
 order += "cpu_usage 0"
 order += "load"
@@ -17,7 +17,8 @@ cpu_temperature 0 {
 }
 
 battery 0 {
-    format = "⚡ %percentage %remaining %consumption"
+    #format = "⚡ %percentage %remaining %consumption"
+    format = "⚡ %percentage"
     last_full_capacity = true
     integer_battery_capacity = true
 }
@@ -32,7 +33,7 @@ load {
 }
 
 cpu_usage {
-    format = "↺ %usage "
+    format = "↺ %usage"
 }
 
 disk "/home" {
