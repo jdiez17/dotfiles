@@ -3,9 +3,8 @@ set $mod Mod4
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:DejaVu Sans Mono 12
-gaps inner 20
-gaps outer 15
-
+#gaps inner 15 
+#gaps outer 15
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -89,7 +88,7 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1
 bindsym $mod+Shift+quotedbl move workspace 2
-bindsym $mod+Shift+periodcentered move workspace 3
+bindsym $mod+Shift+sterling move workspace 3
 bindsym $mod+Shift+dollar move workspace 4
 bindsym $mod+Shift+percent move workspace 5
 bindsym $mod+Shift+ampersand move workspace 6
@@ -182,7 +181,9 @@ for_window [class="Gajim"] floating enable; focus mode_toggle
 for_window [class="Pidgin"] floating enable; focus mode_toggle
 for_window [class="Skype"] floating enable; focus mode_toggle
 
+#for_window [class="^.*"] border pixel 0
+
 # Wallpaper
 exec --no-startup-id sh ~/.fehbg
 
-exec --no-startup-id exec compton --config /home/jdiez/dotfiles/compton.conf
+#exec --no-startup-id exec compton --config /home/jdiez/dotfiles/compton.conf
