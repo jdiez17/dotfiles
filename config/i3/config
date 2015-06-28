@@ -9,9 +9,9 @@ font pango:DejaVu Sans Mono 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+bindsym $mod+space exec togglexkbmap
 bindsym $mod+Return exec urxvt
-bindsym $mod+BackSpace exec uzbl-browser
-bindsym $mod+Shift+BackSpace exec google-chrome
+bindsym $mod+BackSpace exec chromium 
 bindsym $mod+s exec i3lock -c 000000
 
 # kill focused window
@@ -57,10 +57,10 @@ bindsym $mod+o layout tabbed
 bindsym $mod+p layout default
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+F floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -120,6 +120,7 @@ bindsym XF86AudioLowerVolume exec pamixer --allow-boost --decrease 5 && volnoti-
 bindsym XF86AudioRaiseVolume exec pamixer --allow-boost --increase 5 && volnoti-show `vol`
 bindsym $mod+Shift+p exec dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause # Play/Pause spotify
 bindsym Print exec /home/jdiez/bin/scrush
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

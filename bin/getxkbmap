@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# From https://github.com/dduponchel/dotfiles/blob/master/bin/getxkbmap
+
+setxkbmap -print | grep xkb_symbols | cut -d'+' -f 2

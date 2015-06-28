@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+ACTIVE=`getxkbmap`
+
+[[ $ACTIVE = 'gb' ]] && setxkbmap es || setxkbmap gb
