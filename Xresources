@@ -1,9 +1,6 @@
 Xft.dpi:  165 
 
-!!dmenu.font: pango:DejaVu Sans Mono 7
 URxvt.font: xft:Inconsolata for Powerline:size=12,xft:Ubuntu Mono derivative Powerline:size=14,xft:Symbola:size=7
-!!URxvt.font: xft:DejaVu Sans Mono:size=10
-!!URxvt.font: xft:Ubuntu Mono:size=12
 
 !
 URxvt.scrollBar: false
@@ -21,61 +18,45 @@ URxvt.keysym.C-Down:   perl:font-size:decrease
 URxvt.keysym.C-S-Up:   perl:font-size:incglobal
 URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
-#define S_base03        #002630
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
-
-URxvt.depth: 32
-
-URxvt.*background:            S_base03 
-URxvt.*foreground:            S_base0
-URxvt.*fading:                40
-URxvt.*fadeColor:             S_base03
-URxvt.*cursorColor:           S_base1
-URxvt.*pointerColorBackground:S_base01
-URxvt.*pointerColorForeground:S_base1
-
-!! black dark/light
-*color0:                S_base02
-*color8:                S_base03
-
-!! red dark/light
-*color1:                S_red
-*color9:                S_orange
-
-!! green dark/light
-*color2:                S_green
-*color10:               S_base01
-
-!! yellow dark/light
-*color3:                S_yellow
-*color11:               S_base00
-
-!! blue dark/light
-*color4:                S_blue
-*color12:               S_base0
-
-!! magenta dark/light
-*color5:                S_magenta
-*color13:               S_violet
-
-!! cyan dark/light
-*color6:                S_cyan
-*color14:               S_base1
-
-!! white dark/light
-*color7:                S_base2
-*color15:               S_base3
+#define base00 #323232
+#define base01 #393939
+#define base02 #515151
+#define base03 #747369
+#define base04 #a09f93
+#define base05 #d3d0c8
+#define base06 #e8e6df
+#define base07 #f2f0ec
+#define base08 #f2777a
+#define base09 #f99157
+#define base0A #ffcc66
+#define base0B #99cc99
+#define base0C #66cccc
+#define base0D #6699cc
+#define base0E #cc99cc
+#define base0F #d27b53
+URxvt*.foreground:   base05
+URxvt*.background:   base00
+URxvt*.cursorColor:  base05
+URxvt*.color0:       base00
+URxvt*.color1:       base08
+URxvt*.color2:       base0B
+URxvt*.color3:       base0A
+URxvt*.color4:       base0D
+URxvt*.color5:       base0E
+URxvt*.color6:       base0C
+URxvt*.color7:       base05
+URxvt*.color8:       base03
+URxvt*.color9:       base08
+URxvt*.color10:      base0B
+URxvt*.color11:      base0A
+URxvt*.color12:      base0D
+URxvt*.color13:      base0E
+URxvt*.color14:      base0C
+URxvt*.color15:      base07
+URxvt*.color16:      base09
+URxvt*.color17:      base0F
+URxvt*.color18:      base01
+URxvt*.color19:      base02
+URxvt*.color20:      base04
+URxvt*.color21:      base06
+URxvt.background: base00
