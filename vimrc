@@ -48,8 +48,8 @@ set relativenumber
 " Special modes for certain types of files
 autocmd FileType make setlocal noexpandtab
 autocmd Filetype go setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype c setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype cpp setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
+"autocmd Filetype c setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
+"autocmd Filetype cpp setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufRead,BufNewFile *.md setlocal filetype=markdown
 au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
 
